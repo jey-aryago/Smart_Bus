@@ -1,0 +1,113 @@
+:root {
+    --ui-focus: #2563eb;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.brand-name,
+.footer-brand-title,
+.login-card h1,
+.register-heading h2 {
+    font-family: "Inter", Arial, sans-serif;
+    letter-spacing: -.035em;
+}
+
+.navbar nav a,
+.brand-tagline {
+    font-family: inherit;
+}
+
+.seat-tag.unknown {
+    background: #eef2f7;
+    color: #475467;
+}
+
+.complaint-history {
+    margin-top: 28px;
+}
+
+.complaint-history h3 {
+    margin-bottom: 14px;
+}
+
+.complaint-form-card input[type="text"] {
+    width: 100%;
+    min-height: 46px;
+    margin: 0 0 16px;
+    padding: 11px 13px;
+    border: 1px solid #d9dfe7;
+    border-radius: 10px;
+    color: #111827;
+    font: inherit;
+}
+
+.mark-notification-read {
+    margin-top: 8px;
+    padding: 6px 10px;
+    border: 1px solid #d8e2f0;
+    border-radius: 8px;
+    background: #fff;
+    color: #1e40af;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+[tabindex]:not([tabindex="-1"]) {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+    outline: 3px solid var(--ui-focus);
+    outline-offset: 3px;
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled,
+button:disabled {
+    cursor: not-allowed;
+    opacity: .65;
+}
+
+::selection {
+    background: #dbeafe;
+    color: #0b2345;
+}
+
+@media (max-width: 760px) {
+    .navbar nav a,
+    .top-nav .nav-link {
+        min-height: 44px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
